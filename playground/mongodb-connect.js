@@ -4,8 +4,8 @@ const {MongoClient, ObjectID} = require('mongodb');
 const mongoLab = require('../../../secret/mongoLab.js')
 
 // MongoClient.connect('mongodb://localhost/TodoApp', (err, client) => {
-// MongoClient.connect(`mongodb://${mongoLab.mLab}.mlab.com:27199/todoapp`, (err, client) => {
-MongoClient.connect(`mongodb://${mongoLab.digitalOcean}/todoapp`, (err, client) => {
+MongoClient.connect(`mongodb://${mongoLab.mLab}.mlab.com:27199/todoapp`, (err, client) => {
+// MongoClient.connect(`mongodb://${mongoLab.digitalOcean}/todoapp`, (err, client) => {
   if (err) {
     return console.log('Unable to connect to MongoDB server', err)
   }
@@ -13,7 +13,7 @@ MongoClient.connect(`mongodb://${mongoLab.digitalOcean}/todoapp`, (err, client) 
     const db = client.db('todoapp')
     
     db.collection('Todos').insertOne({
-      text: 'Brush my teeth',
+      text: 'Take a plane somewhere',
       completed: false
     }, (err, result) => {
       if(err){
@@ -24,9 +24,9 @@ MongoClient.connect(`mongodb://${mongoLab.digitalOcean}/todoapp`, (err, client) 
     
     
     db.collection('Users').insertOne({
-      name: 'Piko',
+      name: 'Trudy',
       age: 27,
-      location: 'Hanoi'
+      location: 'Melbourne'
     }, (err, result) => {
       if(err) {
         return console.log(err);
