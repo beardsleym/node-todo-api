@@ -13,7 +13,7 @@ MongoClient.connect(`mongodb://${mongoLab.mLab}.mlab.com:27199/todoapp`, (err, c
     const db = client.db('todoapp')
     
     db.collection('Todos').insertOne({
-      text: 'Take a plane somewhere',
+      text: 'Go skiing',
       completed: false
     }, (err, result) => {
       if(err){
@@ -23,15 +23,15 @@ MongoClient.connect(`mongodb://${mongoLab.mLab}.mlab.com:27199/todoapp`, (err, c
     })
     
     
-    db.collection('Users').insertOne({
-      name: 'Trudy',
-      age: 27,
-      location: 'Melbourne'
-    }, (err, result) => {
-      if(err) {
-        return console.log(err);
-      }
-      console.log(JSON.stringify(result.ops[0]._id.getTimestamp()))
-    });
+    // db.collection('Users').insertOne({
+    //   name: 'Trudy',
+    //   age: 27,
+    //   location: 'Melbourne'
+    // }, (err, result) => {
+    //   if(err) {
+    //     return console.log(err);
+    //   }
+    //   console.log(JSON.stringify(result.ops[0]._id.getTimestamp()))
+    // });
     client.close();
 });
