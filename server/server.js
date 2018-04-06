@@ -27,3 +27,5 @@ app.post('/todos', (req, res) => {
 app.listen(process.env.PORT, process.env.IP, function(){
   console.log("Server.js has started!");
 });
+
+module.exports = {app};
