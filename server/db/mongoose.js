@@ -2,7 +2,9 @@ const mongoLab = require('../../../../secret/mongoLab.js')
 var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://${process.env.MLABKEY || mongoLab.mLab}.mlab.com:27199/todoapp`);
+
+const mlabkey = process.env.MLABKEY || mongoLab.mLab
+mongoose.connect(`mongodb://${mlabkey}.mlab.com:27199/todoapp`);
 
 module.exports = {mongoose};
 
