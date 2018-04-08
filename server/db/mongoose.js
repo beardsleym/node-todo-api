@@ -4,7 +4,8 @@ var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-const mlabkey = process.env.MLABKEY || require('../../../../secret/mongoLab.js').mLabLocal
+// So we can have development, production and testing
+const mlabkey = process.env.MLABKEY
 
 mongoose.connect(`mongodb://${mlabkey}`);
 
