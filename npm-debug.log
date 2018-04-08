@@ -1,43 +1,27 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node',
 1 verbose cli   '/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm',
-1 verbose cli   'i',
-1 verbose cli   'expect@1.20.2',
-1 verbose cli   '--save-dev' ]
+1 verbose cli   'run',
+1 verbose cli   'server/tests/server.test.1.js' ]
 2 info using npm@3.10.10
 3 info using node@v6.11.2
-4 silly loadCurrentTree Starting
-5 silly install loadCurrentTree
-6 silly install readLocalPackageData
-7 silly rollbackFailedOptional Starting
-8 silly rollbackFailedOptional Finishing
-9 silly runTopLevelLifecycles Finishing
-10 silly install printInstalled
-11 verbose stack Error: Failed to parse json
-11 verbose stack Unexpected token 't' at 8:6
-11 verbose stack     "test-watch": "nodemon --exec 'npm test'"
-11 verbose stack      ^
-11 verbose stack     at parseError (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:390:11)
-11 verbose stack     at parseJson (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:79:23)
-11 verbose stack     at /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
-11 verbose stack     at /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
-11 verbose stack     at tryToString (fs.js:456:3)
-11 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:443:12)
-12 verbose cwd /home/ubuntu/workspace/node-todo-api
-13 error Linux 4.9.80-c9
-14 error argv "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node" "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm" "i" "expect@1.20.2" "--save-dev"
-15 error node v6.11.2
-16 error npm  v3.10.10
-17 error file /home/ubuntu/workspace/node-todo-api/package.json
-18 error code EJSONPARSE
-19 error Failed to parse json
-19 error Unexpected token 't' at 8:6
-19 error     "test-watch": "nodemon --exec 'npm test'"
-19 error      ^
-20 error File: /home/ubuntu/workspace/node-todo-api/package.json
-21 error Failed to parse package.json data.
-21 error package.json must be actual JSON, not just JavaScript.
-21 error
-21 error This is not a bug in npm.
-21 error Tell the package author to fix their package.json file. JSON.parse
-22 verbose exit [ 1, true ]
+4 verbose stack Error: missing script: server/tests/server.test.1.js
+4 verbose stack     at run (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/lib/run-script.js:151:19)
+4 verbose stack     at /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/lib/run-script.js:61:5
+4 verbose stack     at /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+4 verbose stack     at checkBinReferences_ (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+4 verbose stack     at final (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+4 verbose stack     at then (/home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+4 verbose stack     at /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/read-package-json/read-json.js:311:12
+4 verbose stack     at /home/ubuntu/.nvm/versions/node/v6.11.2/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at tryToString (fs.js:456:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:443:12)
+5 verbose cwd /home/ubuntu/workspace/node-todo-api
+6 error Linux 4.9.80-c9
+7 error argv "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/node" "/home/ubuntu/.nvm/versions/node/v6.11.2/bin/npm" "run" "server/tests/server.test.1.js"
+8 error node v6.11.2
+9 error npm  v3.10.10
+10 error missing script: server/tests/server.test.1.js
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

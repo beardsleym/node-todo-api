@@ -8,7 +8,6 @@ var {User} = require('./models/user')
 
 var app = express();
 
-
 app.use(bodyParser.json());
 
 app.post('/todos', (req, res) => {
@@ -52,11 +51,9 @@ app.delete('/todos/:id', (req, res) => {
   }
   Todo.findByIdAndRemove(id).then((todo) => {
     if(!todo){
-       //if no todo found send 404
       return res.status(404).send();
     }
-    //if validat send todo
-    res.send(todo);
+    res.send({todo});
   }).catch((e) => {
     res.status(400).send();
   });
