@@ -6,3 +6,5 @@ if(env === 'development') {
 } else if (env === 'test') {
   process.env.MLABKEY = require('../../../../secret/mongoLab.js').mLabTest
 }
+
+console.log("MongoDB ****", process.env.MLABKEY)
